@@ -1,0 +1,798 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('Images/Homepage/BodyBG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+.page {
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #5f8575;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+
+header img {
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header nav li {
+    background-color: #F5FFF7;
+    border: solid 2px #7ba18f;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+header nav li:last-child {
+    margin-left: auto;
+}
+
+header nav #selected-button {
+    background-color: #bce2d2;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .button-text {
+    font-family: "Poppins";
+}
+
+.home {
+    display: flex;
+    margin-top: 100px;
+}
+
+.home .side-block {
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border-color: #5F8575;
+    background-color: white;
+    float: left;
+    animation: fade-side 1s ease-in-out forwards;
+    z-index: 9;
+}
+
+.home .list-items {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.home .side-block li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.home #baguio::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/BaguioIcon.png');
+    background-size: cover;
+}
+
+.home #reason::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -7px;
+    width: 30px;
+    height: 30px;
+    background-image: url('Images/Homepage/ReasonIcon.png');
+    background-size: cover;
+}
+
+.home #job::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/JobIcon.png');
+    background-size: cover;
+}
+
+.home #govt-jobs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/EasyIcon.png');
+    background-size: cover;
+}
+
+.home #reqs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/ApplyIcon.png');
+    background-size: cover;
+}
+
+.home #demand::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/DemandIcon.png');
+    background-size: cover;
+}
+
+.home #growth::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/Homepage/CloudIcon.png');
+    background-size: cover;
+}
+
+.home .list-items a {
+    color: black;
+    text-decoration: none;
+}
+
+.home .list-items a:hover {
+    text-decoration: underline;
+}
+
+.home .content-block {
+    border-style: solid;
+    max-width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 370px;
+    border-color: #5F8575;
+    background-color: white;
+    float: right;
+    box-sizing: border-box;
+    animation: fade-up 1s ease-in-out forwards;
+    z-index: 9;
+    padding: 20px;
+    text-align: justify;
+}
+
+.home .content-block :target::before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
+.home .overlooking {
+    margin-top: -20px;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+.home #overlooking-pic {
+    width: 100%;
+}
+
+.home #baguio-city {
+    height: 260px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.home #baguio-city1 {
+    height: 290px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+.home #work {
+    height: 220px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: right;
+}
+
+.home #session-road {
+    height: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.home .contents {
+    display: inline-block;
+}
+
+.home .contents p {
+    font-family: "Poppins" Helvetica;
+    font-size: 23px;
+}
+
+.home .main-titles {
+    font-family: "Tilt Prism", Helvetica;
+    color: #2d5e49;
+    font-size: 35px;
+    margin: 10px;
+    text-align: center;
+}
+
+.home .subtitle {
+    font-family: "Poppins", Helvetica;
+    color: #2d5e49;
+    font-size: 27px;
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+    color: #0c8f58;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.home .content-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home .demand-button {
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: #2d5e49;
+    padding: 10px 20px;
+    margin: 20px 20px;
+}
+
+.home .year {
+    font-family: "Poppins";
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.home .year:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #5F8575;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    font-family: "Poppins";
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.about .content-block {
+    margin-top: 110px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 900px;
+    border: 2px solid #5F8575;
+    border-radius: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.about .about-us {
+    text-align: center;
+    font-family: "Tilt Prism", Helvetica;
+    font-size: 50px;
+    color: #2d5e49;
+    text-decoration: underline;
+}
+
+.about #about-us {
+    font-size: 90px;
+}
+
+.about .info {
+    text-align: justify;
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+.indemand {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.indemand .content-block {
+    margin-top: 110px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 1050px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.indemand .content-block :target::before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
+}
+
+.indemand .title {
+    display: inline-block;
+    width: 600px;
+    border: 2px solid #5F8575;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: white;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.indemand .yr1 {
+    width: 100%;
+    margin: 20px;
+    background-color: rgba(177, 141, 108, 0.5);
+}
+
+.indemand .yr2 {
+    width: 100%;
+    margin: 20px;
+    background-color: rgba(172, 192, 174, 0.5);
+}
+
+.indemand .yr1 .picture {
+    width: 240px;
+    border-radius: 50%;
+    border: 20px solid  white;
+    padding: 15px;
+    margin: 30px;
+    float: left;
+}
+
+.indemand .yr2 .picture {
+    width: 240px;
+    border-radius: 50%;
+    border: 20px solid  white;
+    padding: 15px;
+    margin: 30px;
+    float: right;
+}
+
+.indemand .yr1 .job-list {
+    padding: 20px;
+    float: right;
+}
+
+.indemand .yr2 .job-list {
+    padding: 20px;
+    float: left;
+}
+
+.job-item {
+    width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.indemand #title {
+    font-family: "Tilt Prism", Helvetica;
+    color: #2d5e49;
+    font-size: 40px;
+}
+
+.indemand .texts {
+    font-family: "Poppins";
+    font-size: 17px;
+}
+
+.job-item::before,
+.job-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.job-item::before {
+    border-right-width: 0;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.job-item::after {
+    border-left-width: 0;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.yr1 .job-item.rank-1 {
+    border: 4px solid #5f8575;
+    font-weight: bold;
+    background-color: #9cd095;
+}
+
+.yr1 .job-item.rank-2 {
+    border: 3px solid #5f8575;
+    background-color: #aad7a4;
+}
+
+.yr1 .job-item.rank-3 {
+    border: 2px solid #5f8575;
+    background-color: #b8deb4;
+}
+
+.yr1 .job-item.rank-4 {
+    border: 1px solid #5f8575;
+    background-color: #c6e4c3;
+}
+
+.yr1 .job-item.rank-5 {
+    border: 1px solid #5f8575;
+    background-color: #d4ebd2;
+}
+
+.yr2 .job-item.rank-1 {
+    border: 4px solid #85715f;
+    font-weight: bold;
+    background-color: #d0b295;
+}
+
+.yr2 .job-item.rank-2 {
+    border: 3px solid #85715f;
+    background-color: #d7bfa4;
+}
+
+.yr2 .job-item.rank-3 {
+    border: 2px solid #85715f;
+    background-color: #dec8b4;
+}
+
+.yr2 .job-item.rank-4 {
+    border: 1px solid #85715f;
+    background-color: #e4d6c3;
+}
+
+.yr2 .job-item.rank-5 {
+    border: 1px solid #85715f;
+    background-color: #ebe0d2;
+}
+
+.indemand .years {
+    text-align: center;
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.indemand .year {
+    display: inline-block;
+    font-family: "Poppins";
+}
+
+.growth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.growth .content-block1 {
+    margin-top: 110px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    border: 2px solid #5F8575;
+    border-radius: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.growth .content-block2 {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    border: 2px solid #5F8575;
+    border-radius: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.graph1 {
+    width: 550px;
+    height: 250px;
+    border: 2px solid #cec4b7;
+    position: relative;
+    margin: 50px auto;
+    background-color: white;
+}
+
+.bar {
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    background-color: #a18158;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Open Sans";
+}
+
+.bar-2021 {
+    left: 50px;
+    height: 140px;
+}
+
+.bar-2026 {
+    right: 50px;
+    height: 206px;
+}
+
+.bar2 {
+    position: absolute;
+    width: 90px;
+    background-color: #a18158;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    font-family: "Open Sans";
+    padding: 5px;
+}
+
+.graph2 {
+    width: 900px;
+    height: 300px;
+    border: 2px solid #cec4b7;
+    position: relative;
+    margin: 50px auto; 
+    background-color: white;
+}
+
+.Data-scientist {
+    bottom: 0;
+    right: 70px; 
+    height: 250px;
+}
+  
+.IT-analyst {
+    bottom: 0;
+    right: 180px; 
+    height: 200px;
+}
+  
+.System-analyst {
+    bottom: 0;
+    right: 290px; 
+    height: 150px;
+}
+  
+.Web-designer {
+    bottom: 0;
+    right: 400px; 
+    height: 120px;
+}
+  
+.Web-developer {
+    bottom: 0;
+    right: 510px; 
+    height: 100px;
+}
+  
+.IT-support {
+    bottom: 0;
+    right: 620px; 
+    height: 80px;
+}
+  
+.Computer-programmer {
+    bottom: 0;
+    right: 730px; 
+    height:60px;
+}
+
+.growth .title {
+    text-align: center;
+    font-family: "Tilt Prism";
+    font-size: 50px;
+    color: #2d5e49;
+}
+
+.growth h3 {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 25px;
+    color: #2d5e49;
+}
+
+.growth h4 {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 18px;
+    color: #2d5e49;
+}
+
+.growth p {
+    text-align: justify;
+    font-family: "Open Sans";
+    font-size: 20px;
+}
+
+.faqs {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.faqs .content-block {
+    margin-top: 110px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 1200px;
+    border: 2px solid #5F8575;
+    border-radius: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.faqs #faqs-u {
+    text-align: center;
+    font-family: "Tilt Prism", Helvetica;
+    font-size: 90px;
+    color: #2d5e49;
+    text-decoration: underline;
+}
+
+.faqs .QnAEmpl {
+    border-style:double groove;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 30px 0px;
+    margin-left: 15px;
+    background-color: rgba(161, 129, 88, 0.5);
+}
+
+.faqs .QnAJobS {
+    border-style:double groove;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 30px 0px;
+    margin-left: 15px;
+    background-color: rgba(95, 133, 117, 0.5);
+}
+
+.faqs .icon {
+    vertical-align: middle;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.faqs .EITSARans {
+    font-family: "Poppins";
+    font-size: 20px;
+    margin-left: 40px;
+    text-align: justify;
+}
+
+.faqs .userQues {
+    font-family: "Poppins";
+    font-size: 20px;
+    text-align: justify;
+}
+
+.faqs #info {
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 30px;
+}
+
+.faqs .info1 {
+    font-family: "Poppins";
+    align-content: center;
+    font-size: 25px;
+}
+
+.faqs #gl {
+    text-align: center;
+    font-family: "Tilt Prism", Helvetica;
+    font-size: 60px;
+    color: #2d5e49;
+}
+
+.faqs .list {
+    margin: 10px 0px;
+}
